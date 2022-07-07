@@ -7,7 +7,6 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
-
 // Application Users - Identity
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
 
