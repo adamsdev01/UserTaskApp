@@ -106,7 +106,8 @@ namespace UserTaskApp.Areas.Identity.Pages.Account
                 {
                     _logger.LogInformation("User created a new account with password.");
 
-                    //await _userManager.AddToRoleAsync(user, Enums.Roles.Basic.ToString());
+                    // Add default role to newly registered user
+                    await _userManager.AddToRoleAsync(user, Enums.Roles.Basic.ToString());
 
                     var code = await _userManager.GenerateEmailConfirmationTokenAsync(user);
 
